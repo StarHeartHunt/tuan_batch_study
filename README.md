@@ -12,4 +12,4 @@
 
 - 应为：https://tuan.12355.net/wechat/view/information/member_certification_generated.html?memberId=xxxxxx&showMemberAdditionNames=&showMemberRewardIds=&isShowAllFee=true
 
-将其中 xxxxxx 添加至 mid.txt，一行一个，保存运行即可。
+6. 创建 mid.txt，将其中 xxxxxx 添加至 mid.txt，一行一个，保存运行即可。
