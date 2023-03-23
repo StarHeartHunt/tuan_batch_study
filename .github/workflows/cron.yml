@@ -19,5 +19,5 @@ jobs:
         run: echo "${{ secrets.MID_LIST }}" >> "mid.txt"
 
       - name: Execute Script
-        run: python -m tuan_batch_study
+        run: poetry run python -m tuan_batch_study
         shell: bash
