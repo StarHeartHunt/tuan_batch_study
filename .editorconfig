@@ -35,3 +35,6 @@ indent_size = 2
 
 [{*.py,*.pyi}]
 indent_size = 4
+
+[*.txt]
+insert_final_newline = ignore

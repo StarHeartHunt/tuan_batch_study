@@ -1,0 +1,23 @@
+name: Tuan Study
+
+on:
+  schedule:
+    # Runs at 12am GMT+8
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+jobs:
+  tuan-study:
+    name: Sign in for tuan study
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Python Environment
+        uses: ./.github/actions/setup-python
+
+      - name: Write Mid List
+        run: echo ${{ secrets.MID_LIST }} >> "mid.txt"
+
+      - name: Execute Script
+        run: python -m tuan_batch_study
+        shell: bash

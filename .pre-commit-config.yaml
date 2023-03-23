@@ -28,4 +28,5 @@ repos:
     rev: v3.0.0-alpha.6
     hooks:
       - id: prettier
+        types_or: [javascript, jsx, ts, tsx, markdown, yaml, json]
         stages: [commit]
