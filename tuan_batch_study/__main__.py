@@ -1,12 +1,13 @@
 from loguru import logger
 
-from constants import logger_config
-from utils import get_sign, get_token, save_history, get_chapter_id
+from .constants import logger_config
+from .utils import get_sign, get_token, save_history, get_chapter_id
 
 logger.configure(**logger_config)
 
 if __name__ == "__main__":
-    for mid in open("mid.txt"):
+    for line in open("mid.txt", "r", encoding="utf-8"):
+        mid = line.strip()
         # 跳过空行
         if mid.isspace():
             continue

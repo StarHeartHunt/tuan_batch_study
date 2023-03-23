@@ -1,6 +1,6 @@
 import httpx
 
-from constants import (
+from .constants import (
     api_headers,
     get_sign_url,
     get_token_url,
