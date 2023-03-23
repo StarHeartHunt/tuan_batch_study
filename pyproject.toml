@@ -9,10 +9,37 @@ license = "MIT"
 python = "^3.9"
 httpx = "^0.18.2"
 loguru = "^0.5.3"
-ujson = "^4.1.0"
 
-[tool.poetry.dev-dependencies]
-black = "^21.7b0"
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+isort = "^5.12.0"
+pre-commit = "^3.2.0"
+
+[tool.black]
+line-length = 88
+target-version = ["py38", "py39", "py310", "py311"]
+include = '\.pyi?$'
+extend-exclude = '''
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+length_sort = true
+skip_gitignore = true
+force_sort_within_sections = true
+src_paths = ["tuan_batch_study"]
+extra_standard_library = ["typing_extensions"]
+
+[tool.pycln]
+path = "."
+all = false
+
+[tool.pyright]
+reportShadowedImports = false
+pythonVersion = "3.8"
+pythonPlatform = "All"
+executionEnvironments = [{ root = "./" }]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
