@@ -2,8 +2,8 @@ name: Tuan Study
 
 on:
   schedule:
-    # Runs at 12am GMT+8
-    - cron: "0 4 * * *"
+    # Runs at 12am GMT+8 Every Monday
+    - cron: "0 4 * * 1"
   workflow_dispatch:
 jobs:
   tuan-study:
